@@ -1,6 +1,6 @@
 {
   "name": "wh-cli-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get instant answers to your questions",
   "main": "wh.js",
   "bin": {
