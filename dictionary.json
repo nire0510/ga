@@ -1,0 +1,18 @@
+{
+  "NO_QUESTION": [
+    "What do you want to know?",
+    "Hmmm... can't see any question here...",
+    "Try to be more specific with me!",
+    "Swallowed your tongue?",
+    "I'm waiting",
+    "Still waiting for your question, mate"
+  ],
+  "ERROR": [
+    "Something is terribly wrong!"
+  ],
+  "NO_ANSWER": [
+    "Damn, I wasn't expecting that",
+    "Nope. No answer.",
+    "Dunno, sorry!"
+  ]
+}

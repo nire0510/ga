@@ -1,0 +1,21 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "airbnb-base"],
+    "rules": {
+        "no-console": 0,
+        "prefer-const": 0,
+        "no-process-exit" : 0,
+        "no-magic-numbers": ["error", { "ignore": [2] }],
+        "prefer-destructuring": ["off"],
+        "brace-style": ["error", "stroustrup"],
+        "curly": "error",
+        "quotes": ["error", "single"],
+        "prefer-promise-reject-errors": "Off",
+        "valid-jsdoc": "error",
+        "no-eval": "error",
+        "no-plusplus": 0
+    }
+}
