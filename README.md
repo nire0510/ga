@@ -2,7 +2,7 @@
 Get instant answers to your questions
 
 ## INSTALLATION
-npm i -g whcli
+npm i -g wh-cli-tool
 
 ## USAGE
 - wh calories in pizza
