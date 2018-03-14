@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WH</title>
+  <style>
+    body {
+      background: #6D7074;
+    }
+
+
+    .terminal-window {
+      text-align: left;
+      width: 600px;
+      height: 360px;
+      border-radius: 10px;
+      margin: auto;
+      position: relative;
+    }
+
+    .terminal-window header {
+      background: #E0E8F0;
+      height: 30px;
+      border-radius: 8px 8px 0 0;
+      padding-left: 10px;
+    }
+
+    .terminal-window header .button {
+      width: 12px;
+      height: 12px;
+      margin: 10px 4px 0 0;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+    .terminal-window header .button.green {
+      background: #3BB662;
+    }
+
+    .terminal-window header .button.yellow {
+      background: #E5C30F;
+    }
+
+    .terminal-window header .button.red {
+      background: #E75448;
+    }
+
+    .terminal-window section.terminal {
+      color: white;
+      font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+      font-size: 11pt;
+      background: #30353A;
+      padding: 10px;
+      box-sizing: border-box;
+      position: absolute;
+      width: 100%;
+      top: 30px;
+      bottom: 0;
+      overflow: auto;
+    }
+
+    .terminal-window section.terminal .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .terminal-data {
+      display: none;
+    }
+
+    .terminal-window .gray {
+      color: gray;
+    }
+
+    .terminal-window .green {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="terminal-window">
+    <header>
+      <div class="button green"></div>
+      <div class="button yellow"></div>
+      <div class="button red"></div>
+    </header>
+    <section class="terminal">
+      <div class="history"></div>
+      $&nbsp;
+      <span class="prompt"></span>
+      <span class="typed-cursor"></span>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://www.mattboldt.com/demos/typed-js/js/typed.custom.js"></script>
+  <script>
+    $(function () {
+      var data = [{
+          action: 'type',
+          strings: ['npm i -g wh-cli-tool'],
+          output: '<span class="gray">+wh-cli-tool@0.10.6 installed</span><br>&nbsp;',
+          postDelay: 4000,
+        },
+        {
+          action: 'type',
+          strings: ['wh calories in ^1000 pizza'],
+          output: '266 calories',
+          startDelay: 0,
+          postDelay: 1000,
+        },
+        {
+          action: 'type',
+          //clear: true,
+          strings: ['wh time in new york'],
+          postDelay: 2000,
+          output: '10:56',
+        },
+        {
+          action: 'type',
+          strings: ['wh capital of spain'],
+          output: 'Madrid',
+          postDelay: 2000,
+        }
+      ];
+      runScripts(data, 0);
+    });
+
+    function runScripts(data, pos) {
+      var prompt = $('.prompt'),
+        script = data[pos];
+      if (script.clear === true) {
+        $('.history').html('');
+      }
+      switch (script.action) {
+        case 'type':
+          // cleanup for next execution
+          prompt.removeData();
+          $('.typed-cursor').text('');
+          prompt.typed({
+            strings: script.strings,
+            typeSpeed: 30,
+            callback: function () {
+              var history = $('.history').html();
+              history = history ? [history] : [];
+              history.push('$ ' + prompt.text());
+              if (script.output) {
+                history.push(script.output);
+                prompt.html('');
+                $('.history').html(history.join('<br>'));
+              }
+              // scroll to bottom of screen
+              $('section.terminal').scrollTop($('section.terminal').height());
+              // Run next script
+              pos++;
+              if (pos < data.length) {
+                setTimeout(function () {
+                  runScripts(data, pos);
+                }, script.postDelay || 1000);
+              }
+            }
+          });
+          break;
+        case 'view':
+
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>
