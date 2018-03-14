@@ -8,7 +8,7 @@
         "no-console": 0,
         "prefer-const": 0,
         "no-process-exit" : 0,
-        "no-magic-numbers": ["error", { "ignore": [2] }],
+        "no-magic-numbers": ["error", { "ignore": [2, 0, 1] }],
         "prefer-destructuring": ["off"],
         "brace-style": ["error", "stroustrup"],
         "curly": "error",

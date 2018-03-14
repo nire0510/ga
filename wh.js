@@ -29,9 +29,10 @@ if (question) {
       $('._XWk').first().text(),
       $('#_Cif input').val() && `${$('#_Cif input').val()} ${$('#_Cif select').val()}`,
       $('._H1m').first().text(),
-      $('#cwos').text(),
+      $('#cwos').first().text(),
+      $('._Jig').first().text() && $('._Jig').first().text().substr(0, $('._Jig').first().text().indexOf('.') + 1),
+      $('._p1q').first().text(),
       dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
-      // secondary: `${$('.vk_gy.vk_sh').first().text()}`,
     ])
     .then((answers) => {
       spinner.stop(true);
