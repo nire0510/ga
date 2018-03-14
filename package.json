@@ -1,6 +1,6 @@
 {
   "name": "wh-cli-tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get instant answers to your questions",
   "main": "wh.js",
   "bin": {
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "cli-spinner": "^0.2.8",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },

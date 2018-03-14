@@ -9,3 +9,4 @@ npm i -g wh-cli-tool
 - wh time in new york
 - 100 usd in eur
 - 11GB in MB
+- "2 + 4 * 27"
