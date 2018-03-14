@@ -28,6 +28,7 @@ if (question) {
       $('.vk_bk.vk_ans').first().text(),
       $('._XWk').first().text(),
       $('#_Cif input').val() && `${$('#_Cif input').val()} ${$('#_Cif select').val()}`,
+      $('._H1m').first().text(),
       $('#cwos').text(),
       dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
       // secondary: `${$('.vk_gy.vk_sh').first().text()}`,

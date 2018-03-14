@@ -1,7 +1,7 @@
 {
   "name": "wh-cli-tool",
-  "version": "1.0.2",
-  "description": "Get instant answers to your questions",
+  "version": "1.0.3",
+  "description": "Get instant answers to your everyday WH questions",
   "main": "wh.js",
   "bin": {
     "wh": "wh.js"
