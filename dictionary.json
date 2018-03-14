@@ -4,15 +4,20 @@
     "Hmmm... can't see any question here...",
     "Try to be more specific with me!",
     "Swallowed your tongue?",
-    "I'm waiting",
+    "I'm waiting...",
     "Still waiting for your question, mate"
   ],
   "ERROR": [
-    "Something is terribly wrong!"
+    "Something is terribly wrong!",
+    "Houston we have a problem"
   ],
   "NO_ANSWER": [
     "Damn, I wasn't expecting that",
-    "Nope. No answer.",
-    "Dunno, sorry!"
+    "Nope. No answer",
+    "Dunno, sorry!",
+    "Oh... i haven't seen it coming",
+    "This I don't know. Try something else",
+    "Next question, please!",
+    "Hmmm... Me no English!"
   ]
 }

@@ -8,8 +8,10 @@ npm i -g wh-cli-tool
 - wh calories in pizza
 - wh time in new york
 - 100 usd in eur
-- 11GB in MB
+- 11gb in mb
 - my ip
 - capital of spain
 - "2 + 4 * 27"
-- LY543
+- ly543
+- tallest man
+- define atonomy

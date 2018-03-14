@@ -25,13 +25,13 @@ if (question) {
 
   rp(options)
     .then($ => [
-      $('.vk_bk.vk_ans').first().text(),
-      $('._XWk').first().text(),
-      $('#_Cif input').val() && `${$('#_Cif input').val()} ${$('#_Cif select').val()}`,
-      $('._H1m').first().text(),
-      $('#cwos').first().text(),
-      $('._Jig').first().text() && $('._Jig').first().text().substr(0, $('._Jig').first().text().indexOf('.') + 1),
-      $('._p1q').first().text(),
+      $('#ires .vk_bk.vk_ans').first().text(),
+      $('#ires ._XWk').first().text(),
+      $('#ires #_Cif input').val() && `${$('#_Cif input').val()} ${$('#_Cif select').val()}`,
+      $('#ires ._H1m').first().text(),
+      $('#ires #cwos').first().text(),
+      $('#ires ._Jig').first().text() && $('._Jig').first().text().substr(0, $('._Jig').first().text().indexOf('.') + 1),
+      $('#ires ._p1q').first().text(),
       dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
     ])
     .then((answers) => {
