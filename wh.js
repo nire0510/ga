@@ -30,6 +30,8 @@ if (question) {
       $('#ires #_Cif input').val() && `${$('#_Cif input').val()} ${$('#_Cif select').val()}`,
       $('#ires ._H1m').first().text(),
       $('#ires #cwos').first().text(),
+      $('#ires ._FOc').first().text(),
+      $('#ires #tw-target .tw-data-text').first().text(),
       $('#ires ._Jig').first().text() && $('._Jig').first().text().substr(0, $('._Jig').first().text().indexOf('.') + 1),
       $('#ires ._p1q').first().text(),
       dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
