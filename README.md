@@ -12,6 +12,4 @@ npm i -g wh-cli-tool
 - my ip
 - capital of spain
 - "2 + 4 * 27"
-- ly543
-- tallest man
-- define atonomy
+- tallest person
