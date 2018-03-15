@@ -155,6 +155,7 @@
           action: 'type',
           //clear: true,
           strings: ['wh time in new york'],
+          startDelay: 1000,
           postDelay: 2000,
           output: '10:56',
         },
@@ -163,6 +164,25 @@
           strings: ['wh capital of spain'],
           output: 'Madrid',
           postDelay: 2000,
+        },
+        {
+          action: 'type',
+          strings: ['wh "2 + 4 * 27"'],
+          output: '110',
+          startDelay: 500,
+          postDelay: 1000,
+        },
+        {
+          action: 'type',
+          strings: ['wh apple stock'],
+          output: 'AAPL 178.44',
+          startDelay: 1000,
+        },
+        {
+          action: 'type',
+          strings: ['wh when was google founded'],
+          output: 'September 4, 1998, Menlo Park, California, United States',
+          startDelay: 1000,
         }
       ];
       runScripts(data, 0);

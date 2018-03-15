@@ -13,3 +13,4 @@ npm i -g wh-cli-tool
 - capital of spain
 - "2 + 4 * 27"
 - tallest person
+- apple stock
