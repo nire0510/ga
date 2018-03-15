@@ -50,9 +50,10 @@ if (question) {
         dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
       ];
     })
+    .then(answers => answers.filter(a => a && a !== 'People also ask'))
     .then((answer) => {
       spinner.stop(true);
-      console.log(answer.find(a => a).trim());
+      console.log(answer[0]);
     })
     .catch(() => {
       spinner.stop(true);
