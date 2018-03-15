@@ -1,16 +1,16 @@
-# WH
-Get instant answers to your everyday WH questions
+# GA
+Google answers in your terminal
 
 ## INSTALLATION
-npm i -g wh-cli-tool
+npm i -g gacli
 
 ## USAGE
-- wh calories in pizza
-- wh time in new york
-- 100 usd in eur
-- 11gb in mb
-- my ip
-- capital of spain
-- "2 + 4 * 27"
-- tallest person
-- apple stock
+- ga calories in pizza
+- ga time in new york
+- ga 100 usd in eur
+- ga 11gb in mb
+- ga my ip
+- ga capital of spain
+- ga "2 + 4 * 27"
+- ga tallest person
+- ga apple stock

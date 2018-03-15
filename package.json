@@ -1,19 +1,20 @@
 {
-  "name": "wh-cli-tool",
-  "version": "1.0.10",
-  "description": "Get instant answers to your everyday WH questions",
-  "main": "wh.js",
+  "name": "gacli",
+  "version": "1.0.0",
+  "description": "Google answers in your terminal",
+  "main": "ga.js",
   "bin": {
-    "wh": "wh.js"
+    "ga": "ga.js"
   },
   "preferGlobal": true,
   "scripts": {
-    "start": "node wh.js"
+    "start": "node ga.js"
   },
   "keywords": [
     "answer",
     "question",
-    "cli"
+    "cli",
+    "google"
   ],
   "author": "Nir Elbaz <nire0510@gmail.com> (http://nirelbaz.com)",
   "license": "ISC",

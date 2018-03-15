@@ -30,6 +30,7 @@ if (question) {
 
       return [
         $('#ires .vk_bk.vk_ans').first().text(),
+        $('#tw-target-text').first().text(),
         $('#ires #NotFQb input').val() && `${$('#ires #NotFQb input').val()} ${$('#ires #NotFQb select').val()}`,
         $('#ires [data-symbol]').data('symbol') && `${$('#ires [data-symbol]').data('symbol')} ${$('#ires [data-value]').data('value')}`,
         $$('#ires div')
@@ -39,7 +40,7 @@ if (question) {
         dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
       ];
     })
-    .then(answers => answers.filter(a => a && a !== 'People also ask'))
+    .then(answers => answers.filter(a => a && a !== ['People also ask', 'undefined'].every(option => a !== option)))
     .then((answer) => {
       spinner.stop(true);
       console.log(answer[0].trim());
