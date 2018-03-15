@@ -1,5 +1,5 @@
 # GA
-Google answers in your terminal
+Google answers right from your terminal
 
 ## INSTALLATION
 npm i -g gacli
