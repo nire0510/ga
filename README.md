@@ -14,3 +14,4 @@ npm i -g gacli
 - ga "2 + 4 * 27"
 - ga tallest person
 - ga apple stock
+- ga hello spanish

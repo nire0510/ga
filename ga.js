@@ -40,7 +40,7 @@ if (question) {
         dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
       ];
     })
-    .then(answers => answers.filter(a => a && a !== ['People also ask', 'undefined'].every(option => a !== option)))
+    .then(answers => answers.filter(a => a && ['People also ask', 'undefined'].every(option => a !== option)))
     .then((answer) => {
       spinner.stop(true);
       console.log(answer[0].trim());
