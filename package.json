@@ -1,6 +1,6 @@
 {
   "name": "gacli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Google answers right from your terminal",
   "main": "ga.js",
   "bin": {
@@ -22,6 +22,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cli-spinner": "^0.2.8",
     "juice": "^4.2.3",
+    "open": "0.0.5",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },

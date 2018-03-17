@@ -4,6 +4,7 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const dictionary = require('./dictionary.json');
 const juice = require('juice');
+const open = require('open');
 const Spinner = require('cli-spinner').Spinner;
 
 const spinner = new Spinner();
@@ -37,13 +38,20 @@ if (question) {
           .filter((index, elm) => elm.attribs.style.match(/font-size: (3\dpx|2\dpx|xx-large)/))
           .first()
           .text(),
-        dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
+        // dictionary.NO_ANSWER[Math.round(Math.random() * dictionary.NO_ANSWER.length)],
       ];
     })
-    .then(answers => answers.filter(a => a && ['People also ask', 'undefined'].every(option => a !== option)))
-    .then((answer) => {
+    .then(answers => answers.filter(a => a && ['People also ask', 'undefined', question].every(option => a !== option && question.toLowerCase().indexOf(a.toLowerCase()) === -1)))
+    .then((answers) => {
       spinner.stop(true);
-      console.log(answer[0].trim());
+
+      if (answers.length) {
+        console.log(answers[0].trim());
+      }
+      else {
+        console.log('Let me google it for you');
+        open(`https://www.google.co.il/search?q=${encodeURIComponent(question)}`);
+      }
     })
     .catch(() => {
       spinner.stop(true);
