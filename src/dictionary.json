@@ -20,5 +20,13 @@
     "This I don't know. Try something else",
     "Next question, please!",
     "Hmmm... Me no English!"
-  ]
+  ],
+  "MISC": {
+    "google": "Let me google it for you...",
+    "checking": "Checking for a newer version... ",
+    "uptodate": "You have the latest version:",
+    "newer": "A newer version is available!",
+    "upgrade": "To upgrade to the latest version, run:",
+    "command": "npm install -g gacli"
+  }
 }

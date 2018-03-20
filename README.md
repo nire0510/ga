@@ -5,13 +5,26 @@ Google answers right from your terminal
 npm i -g gacli
 
 ## USAGE
+```
+  Usage: ga [options] <question>
+
+  Options:
+
+    -v, --version     output the version number
+    -c, --copy        Copy answer to clipboard
+    -s, --say         Say the answer out loud
+    -S, --no-spinner  Do not show spinner
+    -h, --help        output usage information
+```
+
 - ga calories in pizza
 - ga time in new york
-- ga 100 usd in eur
-- ga 11gb in mb
-- ga my ip
-- ga capital of spain
-- ga "2 + 4 * 27"
+- ga 100 usd eur
+- ga 11gb mb
+- ga ip
+- ga spain capital
+- ga "2+4*27" (or 2+4\*7 -> no postrophes, but asterisk should be escaped)
 - ga tallest person
 - ga apple stock
-- ga hello spanish
+- ga hello in spanish
+- ga mexico dialing code

@@ -1,14 +1,14 @@
 {
   "name": "gacli",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Google answers right from your terminal",
-  "main": "ga.js",
+  "main": "bin/ga.js",
   "bin": {
-    "ga": "ga.js"
+    "ga": "bin/ga.js"
   },
   "preferGlobal": true,
   "scripts": {
-    "start": "node ga.js"
+    "start": "node bin/ga.js"
   },
   "keywords": [
     "answer",
@@ -21,10 +21,14 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "cli-spinner": "^0.2.8",
+    "clipboardy": "^1.2.3",
+    "colors": "^1.2.1",
+    "commander": "^2.15.1",
     "juice": "^4.2.3",
     "open": "0.0.5",
     "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "say": "^0.14.0"
   },
   "devDependencies": {
     "eslint": "^4.18.2",
