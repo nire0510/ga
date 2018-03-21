@@ -1,6 +1,7 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 const clipboardy = require('clipboardy');
+const cp = require('child_process');
 const dictionary = require('./dictionary.json');
 const juice = require('juice');
 const open = require('open');
@@ -61,7 +62,7 @@ module.exports = {
           console.log(answer.bold);
           // say it:
           if (program.say) {
-            say(answer);
+            say.speak(answer);
           }
           // copy to clipboard:
           if (program.copy) {
@@ -83,7 +84,7 @@ module.exports = {
 
   check() {
     process.stdout.write(`\n${dictionary.MISC.checking}`);
-    const latestVersion = require('child_process').execSync(`npm show ${pkg.name} version`);
+    const latestVersion = cp.execSync(`npm show ${pkg.name} version`);
 
     // new version available:
     if (`${latestVersion}`.indexOf(pkg.version) !== 0) {
