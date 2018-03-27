@@ -40,6 +40,7 @@ module.exports = {
           $('#ires .vk_bk.vk_ans').first().text(),
           $('#tw-target-text').first().text(),
           $('#ires #NotFQb input').val() && `${$('#ires #NotFQb input').val()} ${$('#ires #NotFQb select').val()}`,
+          $('#ires #wob_tm').text() && `${$('#ires #wob_tm').text()} ${$('#ires .wob-unit > span').filter((i, el) => $(el).css('display') !== 'none').text()}`,
           $('#ires [data-symbol]').data('symbol') && `${$('#ires [data-symbol]').data('symbol')} ${$('#ires [data-value]').data('value')}`,
           $$('#ires div')
             .filter((index, elm) => elm.attribs.style.match(/font-size: (3\dpx|2\dpx|xx?-large)/))

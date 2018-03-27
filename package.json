@@ -1,6 +1,6 @@
 {
   "name": "gacli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Google answers right from your terminal",
   "main": "bin/ga.js",
   "bin": {
