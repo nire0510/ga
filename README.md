@@ -29,3 +29,6 @@ npm i -g gacli
 - ga apple stock
 - ga hello in spanish
 - ga mexico dialing code
+- ga days until `ga -S xmas 2020`
+
+[Click here to see the demo](https://nire0510.github.io/ga/)
