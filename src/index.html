@@ -195,6 +195,13 @@
           strings: ['ga when was google founded'],
           output: 'September 4, 1998, Menlo Park, California, United States',
           startDelay: 1000,
+        },
+        {
+          action: 'type',
+          strings: ['ga answer to life the universe ^1000 and everything'],
+          output: '42',
+          startDelay: 1000,
+          postDelay: 2000,
         }
       ];
       runScripts(data, 0);

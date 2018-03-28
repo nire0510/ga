@@ -21,6 +21,7 @@ npm i -g gacli
 - ga time in new york
 - ga 100 usd eur
 - ga 11gb mb
+- ga answer to life the universe and everything
 - ga ip
 - ga spain capital
 - ga "2+4*27" (or 2+4\*7 -> no postrophes, but asterisk should be escaped)

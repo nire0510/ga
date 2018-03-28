@@ -60,7 +60,7 @@ module.exports = {
           const answer = answers[0].trim();
 
           // show answer:
-          console.log(answer.bold);
+          console.log(answer);
           // say it:
           if (program.say) {
             say.speak(answer);
